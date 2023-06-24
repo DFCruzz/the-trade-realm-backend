@@ -5,10 +5,10 @@ async function findAllMainCategory() {
     return await prisma.maincategory.findMany()
 }
 
-async function findSubByMainId(mainCategoryId: number) {
+async function findSubByMainId(mainCategoryRef: number) {
     return await prisma.subcategory.findMany({
         where: {
-            mainCategoryId
+            mainCategoryRef
         }
     })
 }
