@@ -6,16 +6,12 @@ import { loadEnv } from "./config/envs"
 loadEnv();
 
 import { handleApplicationErrors } from './middlewares/errMiddleware';
-import {
-    usersRoute
-} from "./routes/userRoute"
 import { itemsRoute } from "./routes/itemsRoute";
 
 const app = express();
 app
     .use(cors())
     .use(express.json())
-    .use("/auth", usersRoute)
     .use("/items", itemsRoute)
     .use(handleApplicationErrors);
 
