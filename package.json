@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc -p tsconfig.build.json",
-    "start": "npm run prisma:migrate:deploy && node dist/server.js",
+    "start": "npm run prisma:migrate:deploy && npm run seed && node dist/server.js",
     "dev": "cross-env NODE_ENV=development nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
     "test": "cross-env NODE_ENV=test jest --passWithNoTests --runInBand",
     "prisma:migrate:dev": "prisma migrate dev",

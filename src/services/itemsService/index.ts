@@ -1,5 +1,5 @@
-import { notFoundError } from "@/errors/not-found-error";
-import itemsRepository from "@/repositories/itemsRepository";
+import { notFoundError } from "../../errors/not-found-error";
+import itemsRepository from "../../repositories/itemsRepository"
 
 
 async function listMainCategories() {

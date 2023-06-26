@@ -1,6 +1,4 @@
-import { AuthenticatedRequest } from "@/middlewares/authMiddleware";
-import { RequestError } from "@/protocols";
-import itemsService from "@/services/itemsService";
+import itemsService from "../services/itemsService";
 import { NextFunction, Request, Response } from "express";
 import httpStatus from "http-status";
 
